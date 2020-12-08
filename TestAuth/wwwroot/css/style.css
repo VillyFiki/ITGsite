@@ -161,6 +161,31 @@ body {
     box-shadow: 2px 2px 8px rgba(0,0,0,.1);
     border-radius: 10px;
 }
+.expand {
+    width: 180px;
+	float: left;
+	margin-top: 20px;
+	border-top-width: 3px;
+	border-top-style: solid;
+	border-top-color: #fff;
+	margin-left: 5px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,.1);
+    border-radius: 10px;
+	
+    cursor: pointer;
+}
+.etp {
+	width: 180px;
+	float: left;
+	margin-top: 20px;
+	border-top-width: 3px;
+	border-top-style: solid;
+	border-top-color: #fff;
+	margin-left: 5px;
+	box-shadow: 2px 2px 8px rgba(0,0,0,.1);
+	border-radius: 10px;
+	cursor: pointer;
+}
 #footer {
  
 }
