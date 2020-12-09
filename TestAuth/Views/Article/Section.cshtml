@@ -15,8 +15,8 @@
                 Список №1
                 <span class="expand">+</span>
             </div>
-            <ul>
-                <li class="test"><a asp-controller="Article" asp-action="GetArticle" asp-route-id=1>procedures.php</a></li>
+            <ul class="dropdown">
+                <li class="test" ><a asp-controller="Article" asp-action="GetArticle" asp-route-id=1>procedures.php</a></li>
                 <li class="test"><a asp-controller="Article" asp-action="GetArticle" asp-route-id=2>company_list.php</a></li>
                 <li class="test"><a asp-controller="Article" asp-action="GetArticle" asp-route-id=3>company.php</a></li>
                 <li class="test"><a asp-controller="Article" asp-action="GetArticle" asp-route-id=4>protocols_list.php</a></li>
@@ -33,7 +33,7 @@
 
                     <script>
                         $(document).ready(function () {
-                            $("ul").show();
+                            $(".dropdown").show();
                         });
                     </script>
 
@@ -48,7 +48,7 @@
 
 <script>
     $(document).ready(function () {
-        $("ul").hide();
+        $(".dropdown").hide();
         $(".box div").click(function () {
             $(this).next().slideToggle();
             var text = $("span", this).text();

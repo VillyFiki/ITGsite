@@ -2,7 +2,7 @@
 	menu бар слева
 */
 #menu {
-    width: 210px;
+    width: 220px;
     padding: 1px;
     float: left;
     margin-top: 20px;
@@ -23,7 +23,7 @@
         list-style-type: none;
         margin: 0px;
         padding: 0px;
-        width: 180px;
+        width: 220px;
     }
 
         #menu ul li:hover {
@@ -33,13 +33,18 @@
     #menu li {
         display: block;
         padding: 5px;
+        color: #616161;
+        text-decoration: none;
     }
 
-.text {
-    font-size: 12px;
-    color: #616161;
-    margin-left: 15px;
-}
+    #menu a {
+        display: block;
+        font-size: 12px;
+        color: #616161;
+        margin-left: 15px;
+        text-decoration: none;
+    }
+
 
 /*		Заголовок		*/
 .title {
@@ -55,7 +60,6 @@
 
 .expand {
     cursor: pointer;
-    float: right;
 }
 
 /*
@@ -64,10 +68,10 @@
 .maincontent {
     list-style-type: none;
     word-wrap: break-word;
-    width: 660px;
+    width: 620px;
     float: right;
     margin-top: 20px;
-    height: auto;
+    height: 1999;
     box-shadow: 2px 2px 8px rgba(0,0,0,.1);
     border-radius: 10px;
     padding-left: 20px;
@@ -75,7 +79,7 @@
 }
 
 /*
-	Тех часть. Блоки, враперы, шрифты.
+	Блоки, враперы, шрифты.
 */
 .wrapper {
     height: 800px;
