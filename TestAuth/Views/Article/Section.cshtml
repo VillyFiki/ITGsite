@@ -3,65 +3,56 @@
 *@
 @model List<string>
 
-
-@{
-    int ida = 1;
-}
 <link rel="stylesheet" href="~/css/style.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-<body>
 
-    <div id="wrapper">
-        <div id="content">
-            <div id="menu" class="box">
-                <h3 class="etp">
-                    <a>ETP</a>
-                    <span class="expand">+</span>
-                </h3>
-                <ul>
-                    <li>procedures.php</li>
-                    <li><a asp-controller="Article" asp-action="GetArticle" asp-route-id=1>procedures.php</a></li>
-                    <li><a asp-controller="Article" asp-action="GetArticle" asp-route-id=2>company_list.php</a></li>
-                    <li><a asp-controller="Article" asp-action="GetArticle" asp-route-id=3>company.php</a></li>
-                    <li><a asp-controller="Article" asp-action="GetArticle" asp-route-id=4>protocols_list.php</a></li>
-                    <li><a asp-controller="Article" asp-action="GetArticle" asp-route-id=5>protocols.php</a></li>
-                </ul>
+
+<div class="wrapper">
+    <div class="left_block">
+        <div class="box" id="menu">
+            <div class="title">
+                Список №1
+                <span class="expand">+</span>
             </div>
-            <script>
-                $(document).ready(function () {
-                    $("ul").hide();
-                    $(".box h3").click(function () {
-                        $(this).next().slideToggle();
-                        var text = $("span", this).text();
-                        $("span", this).text(text != "+" ? "+" : "-")
-                    });
-                });
-            </script>
-
-            <div id="maincontent">
-
-                @{
-                    if (Model != null)
-                    {
-                        @Html.Raw(Model[0]);
-
-                        <script>
-                            $(document).ready(function () {
-                                $("ul").show();
-                            });
-                        </script>
-
-                        <div class="text-center"><input type="submit" value="Попробовать Пример" onclick="location.href='@Url.Action(Model[1], "api")'" /></div>
-                        <p></p>
-                    }
-
-                }
-
-            </div>
-
-
+            <ul>
+                <li class="test"><a asp-controller="Article" asp-action="GetArticle" asp-route-id=1>procedures.php</a></li>
+                <li class="test"><a asp-controller="Article" asp-action="GetArticle" asp-route-id=2>company_list.php</a></li>
+                <li class="test"><a asp-controller="Article" asp-action="GetArticle" asp-route-id=3>company.php</a></li>
+                <li class="test"><a asp-controller="Article" asp-action="GetArticle" asp-route-id=4>protocols_list.php</a></li>
+                <li class="test"><a asp-controller="Article" asp-action="GetArticle" asp-route-id=5>protocols.php</a></li>
+            </ul>
         </div>
     </div>
+    <div class="right_block">
+        <div class="maincontent">
+            @{
+                if (Model != null)
+                {
+                    @Html.Raw(Model[0]);
 
-</body>
+                    <script>
+                        $(document).ready(function () {
+                            $("ul").show();
+                        });
+                    </script>
+
+                    <div class="text-center"><input type="submit" value="Попробовать Пример" onclick="location.href='@Url.Action(Model[1], "api")'" /></div>
+                    <p></p>
+                }
+
+            }
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("ul").hide();
+        $(".box div").click(function () {
+            $(this).next().slideToggle();
+            var text = $("span", this).text();
+            $("span", this).text(text != "+" ? "+" : "-")
+        });
+    });
+</script>
