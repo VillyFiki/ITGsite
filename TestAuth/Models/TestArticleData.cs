@@ -7,24 +7,93 @@ namespace TestAuth.Models
 {
     public static class TestArticleData
     {
-        public static string Article1 = @"<p><b>Вывод списка закупок, в которых были произведены обновления за последние n дней у определенного заказчика</b></p>
+        public static string Article1 = @"
 
+<div class=""tag"">GET</div>
+<br>
+			
+			<div class=""article"" >
+			
+				<h4 align = ""center"" > Вывод списка закупок, в которых были произведены обновления за последние n дней у определенного заказчика</h4>
+				<br>
+				
+				<hr size = ""1"" />
 
+                <h3> Request:</h3> 
+				<br>
+				Url:
+				<br>
                 Параметры запроса(включаются в адресную строку):
-                <ul>
-                    <li>late – задается период времени;</li>
-                    <li>inn и kpp – задается конкретный заказчик.</li>
-                </ul>
+				<table>
+					<tr>
+						<td>
+							late
+                        </td>
+						<td>
+							Задается период времени;
+						</td>
+					</tr>
+					<tr>
+						<td>
+							inn
+                        </td>
+						<td>
+							Задается ИНН конкретного заказчика.
 
-                Пример:
-                <div class=""gray"">Есть запрос https://etp.gpb.ru/api/procedures.php?inn=7724514910&kpp=772801001&late=10 </div>
-                который отправляет данные об ИНН, КПП и о периоде времени(в днях), а в ответ получает список закупок указанного заказчика.Ответ будет отправлен в формате XML.
+                        </td>
+					</tr>
+					<tr>
+						<td>
+
+                            kpp
+                        </td>
+						<td>
+
+                            Задается КПП конкретного заказчика.
+						</td>
+					</tr>
+				</table>
+				<br>
+				<hr size = ""1"" />
+
+                <h3> Response:</h3> 
                 Список полей в xml документе:
-                <ul>
-                    <li>registry_number Реестровый номер процедуры;</li>
-                    <li>Number Номер лота в рамках соответствующей процедуры;</li>
-                    <li>Status Статус лота;</li>
-                </ul>
+				<br>
+				<table>
+					<tr>
+						<td>
+
+                            registry_number
+                        </td>
+						<td>
+
+                            Реестровый номер процедуры
+                        </td>
+					</tr>
+					<tr>
+						<td>
+
+                            number
+                        </td>
+						<td>
+
+                            Номер лота в рамках соответствующей процедуры;
+						</td>
+					</tr>
+					<tr>
+						<td>
+							status
+                        </td>
+						<td>
+							Статус лота;
+						</td>
+					</tr>
+				</table>
+				<br>
+				
+			</div>
+
+
 
 ";
         public static string Article2 = @"                <p><b>Вывод списка закупок, в которых были произведены обновления за последние n дней</b></p>
@@ -71,177 +140,7 @@ namespace TestAuth.Models
                 </p>
 
                 Описание возвращаемых параметров:
-                <table>
-                    <tr>
-                        <td>Организация</td>
-                        <td>Наименование поля</td>
-                        <td>Описание</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>id</td>
-                        <td>
-                            идентификатор организации в системе ЭТП
-                            ГПБ (внутренний)
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>inn</td>
-                        <td>
-                            ИНН
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>kpp</td>
-                        <td>КПП</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>ogrn</td>
-                        <td>ОГРН</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>full_name</td>
-                        <td>полное наименование организации</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>short_name</td>
-                        <td>
-                            сокращенное наименование организации
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>phone</td>
-                        <td>
-                            контактный телефон
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>fax</td>
-                        <td>факс</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>email</td>
-                        <td>контактный e-mail</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>addr_main</td>
-                        <td>юридический адрес</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>addr_post</td>
-                        <td>почтовый адрес</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>accreditation</td>
-                        <td>
-                            дата аккредитации. Аттрибут type
-                            определяет тип аккредитации: «customer»,
-                            «supplier»
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>date_last_update</td>
-                        <td>
-                            дата последнего изменения данных
-                            организации
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>region</td>
-                        <td>регион организации</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>profile</td>
-                        <td>
-                            название профиля. Аттрибут type
-                            определяет тип профиля: «customer» или
-                            «supplier»
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>acct_kor</td>
-                        <td>
-                            номер коррепондентского счета
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>bik</td>
-                        <td>БИК банка</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>bank</td>
-                        <td>наименование банка</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>bank_addr</td>
-                        <td>
-                            адрес банка
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>files</td>
-                        <td>
-                            документы организации, может быть
-                            множественным
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>files</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>file</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>file</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>customer</td>
-                        <td>
-                            документы организации аккредитованной в
-                            качестве заказчика
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>supplier</td>
-                        <td>
-                            документы организации аккредитованной в
-                            качестве заявителя
-                        </td>
-                    </tr>
-                </table>
-
+                
 
                 <p> Описание атрибутов документов организации: </p>
                 <ul>

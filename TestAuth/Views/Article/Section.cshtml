@@ -31,12 +31,6 @@
                 {
                     @Html.Raw(Model[0]);
 
-                    <script>
-                        $(document).ready(function () {
-                            $(".dropdown").show();
-                        });
-                    </script>
-
                     <div class="text-center"><input type="submit" value="Попробовать Пример" onclick="location.href='@Url.Action(Model[1], "api")'" /></div>
                     <p></p>
                 }
@@ -46,9 +40,21 @@
     </div>
 </div>
 
-<script>
+<script type="text/javascript">
     $(document).ready(function () {
-        $(".dropdown").hide();
+        @if(Model != null)
+        {
+            <text>
+            $(".dropdown").show();
+            </text>
+        }
+        else
+        {
+            <text>
+            $(".dropdown").hide();
+            </text>
+        }
+
         $(".box div").click(function () {
             $(this).next().slideToggle();
             var text = $("span", this).text();
