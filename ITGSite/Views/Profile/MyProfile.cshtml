@@ -1,0 +1,69 @@
+﻿@model ITGSite.Models.Profile.UserProfile
+    <div class="wrapper">
+        <div class="left_block">
+            <div class="profilemenu">
+                <div class="title">
+                    Профиль
+                </div>
+                <ul>
+                    <li class="test"><a>Инфо</a></li>
+                    <li class="test"><a>Избранное</a></li>
+                    <li class="test"><a>Обратная связь</a></li>
+                </ul>
+
+                <div class="title">
+                    GO TO
+                </div>
+                <ul>
+                    <li class="test"><a>Home</a></li>
+                    <li class="test"><a>Manuals</a></li>
+                    <li class="test"><a>Sandbox</a></li>
+                    <li class="test"><a>Support</a></li>
+                    <li class="test"><a>SDK</a></li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="right_block">
+            <div class="profilecontent">
+                <h2>Добро пожаловать, @Model.Name</h2>
+
+                Информация о вас:
+
+                Ваш возраст: @Model.Age
+
+                Ваше имя: @Model.Name
+                <br>
+
+                <div class="dropdown-title">
+                    Изменить данные о себе:
+                    <div class="expand">&#8249;</div>
+                </div>
+                <div class="dropdown">
+                    <form asp-action="Edit" asp-controller="Profile">
+                        <div class="validation" asp-validation-summary="ModelOnly"></div>
+                        <div>
+                            <div class="form-group">
+                                <label asp-for="Name">Введите ваше имя</label>
+                                <input type="text" asp-for="Name" />
+                                <span asp-validation-for="Name" />
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Age">Введите ваш возраст</label>
+                                <input asp-for="Age" />
+                                <span asp-validation-for="Age" />
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Изменить" class="btn btn-outline-dark" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".dropdown").hide();
+        });
+    </script>

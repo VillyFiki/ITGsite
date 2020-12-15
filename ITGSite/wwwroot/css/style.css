@@ -1,0 +1,327 @@
+/*
+					Created by villyfiki
+					
+					Leaders of Digital. Ural IT Hub. GazPromBank case. 
+					
+					https://vk.com/teatekking
+					https://github.com/VillyFiki
+					https://t.me/villyfiki
+					
+*/
+
+/*
+*************************************************************************************************************************************************
+*/
+
+/*
+	menu бар слева
+*/
+#menu {
+    box-sizing: border-box;
+    background-color: #fff;
+    width: 220px;
+    padding: 1px;
+    float: left;
+    border-top-width: 3px;
+    border-top-style: solid;
+    border-top-color: #fff;
+    box-shadow: 2px 2px 8px rgba(0,0,0,.1);
+    border-radius: 10px;
+}
+
+    #menu h3 {
+        color: #000;
+        margin: 5px;
+    }
+
+    #menu ul {
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+        width: 220px;
+    }
+
+        #menu ul li:hover {
+            background-color: #F0F0F0;
+        }
+
+    #menu li {
+        display: block;
+        padding: 5px;
+        color: #616161;
+        text-decoration: none;
+    }
+
+    #menu a {
+        display: block;
+        font-size: 12px;
+        color: #616161;
+        margin-left: 15px;
+        text-decoration: none;
+    }
+
+.title {
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 3px;
+    padding: 8px;
+}
+
+    .title:hover {
+        background: #F0F0F0;
+    }
+
+.header {
+    display: block;
+    font-size: 20px;
+}
+
+/*
+*************************************************************************************************************************************************
+*/
+
+/*
+	Content бар справа
+*/
+.maincontent {
+    box-sizing: border-box;
+    background-color: #fff;
+    list-style-type: none;
+    width: 750px;
+    float: left;
+    height: auto;
+    box-shadow: 2px 2px 8px rgba(0,0,0,.1);
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+}
+
+.examplecontent {
+    box-sizing: border-box;
+    background-color: #fff;
+    list-style-type: none;
+    width: 750px;
+    float: left;
+    height: auto;
+    box-shadow: 2px 2px 8px rgba(0,0,0,.1);
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+}
+
+/*
+*************************************************************************************************************************************************
+*/
+
+/*
+	Шрифты и тд
+*/
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+/*
+*************************************************************************************************************************************************
+*/
+
+/*
+	Для статей 
+*/
+.article {
+}
+
+    .article ul {
+        display: block;
+    }
+
+li {
+    display: block;
+}
+
+.article a {
+}
+
+.url {
+}
+
+.tag {
+    text-align: center;
+    background-color: #EFEEF7;
+    margin-top: 20px;
+    width: 75px;
+    height: 32px;
+    padding: 8px;
+    box-shadow: 1px 1px 8px rgba(0,0,0,.1);
+}
+
+.gray {
+    background-color: #f2f2f2;
+    padding: 4px;
+}
+
+td {
+    border: 1px solid #000;
+    font-size: 12px;
+}
+
+/*
+*************************************************************************************************************************************************
+*/
+
+/*
+	Кнопочка
+*/
+
+a.runbutton {
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    padding: .8em 1em calc(.8em + 3px);
+    border-radius: 3px;
+    background: rgb(64,199,129);
+    box-shadow: 0 -3px rgb(53,167,110) inset;
+    transition: 0.2s;
+}
+
+    a.runbutton:hover {
+        background: rgb(53, 167, 110);
+    }
+
+    a.runbutton:active {
+        background: rgb(33,147,90);
+        box-shadow: 0 3px rgb(33,147,90) inset;
+    }
+
+/*
+*************************************************************************************************************************************************
+*/
+
+/*
+	Стандартные dropdown
+*/
+.expand {
+    display: inline-block;
+    transition: transform .2s;
+    cursor: pointer;
+    font-size: 16px;
+    float: right;
+}
+
+    .expand.active {
+        transform: rotate(-90deg);
+    }
+
+.dropdown-title {
+    font-size: 14px;
+    cursor: pointer;
+    padding: 8px;
+}
+
+    .dropdown-title:hover {
+        background: #F0F0F0;
+    }
+
+/*
+*************************************************************************************************************************************************
+*/
+/*
+	Profile
+*/
+.profilecontent {
+    box-sizing: border-box;
+    background-color: #fff;
+    list-style-type: none;
+    width: 750px;
+    float: left;
+    height: auto;
+    box-shadow: 2px 2px 8px rgba(0,0,0,.1);
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+}
+
+.profilemenu {
+    box-sizing: border-box;
+    background-color: #fff;
+    width: 220px;
+    padding: 1px;
+    float: left;
+    border-top-width: 3px;
+    border-top-style: solid;
+    border-top-color: #fff;
+    box-shadow: 2px 2px 8px rgba(0,0,0,.1);
+    border-radius: 10px;
+}
+
+    .profilemenu ul {
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+    }
+
+        .profilemenu ul li:hover {
+            background-color: #F0F0F0;
+        }
+
+    .profilemenu li {
+        cursor: pointer;
+        display: block;
+        padding: 5px;
+        color: #616161;
+        text-decoration: none;
+    }
+
+    .profilemenu a {
+        display: block;
+        font-size: 12px;
+        color: #616161;
+        margin-left: 15px;
+        text-decoration: none;
+    }
+
+/*
+*************************************************************************************************************************************************
+*/
+/*
+	Блоки, враперы, шрифты.
+*/
+.wrapper {
+    margin-top: 20px;
+    margin: auto;
+    height: 800px;
+    width: 930px;
+}
+
+.left_block {
+    float: left;
+    width: 220px;
+}
+
+.right_block {
+    float: right;
+    width: 678px;
+}
+
+body {
+    font-family: Verdana, Roboto Condensed, sans-serif;
+    font-size: 14px;
+    background-color: #F5F5F5;
+}

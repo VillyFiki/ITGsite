@@ -1,0 +1,74 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model ITGSite.Models.Manuals.Manual;
+
+<link rel="stylesheet" href="~/css/style.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+
+<div class="wrapper">
+    <div class="left_block">
+        <div id="menu">
+            <div class="title">
+                Список №1
+                <div class="expand">&#8249;</div>
+            </div>
+            <ul class="dropdown">
+                <li class="test"><a asp-controller="Content" asp-action="Manuals" asp-route-id=1>procedures.php</a></li>
+                <li class="test"><a asp-controller="Content" asp-action="Manuals" asp-route-id=2>company_list.php</a></li>
+                <li class="test"><a asp-controller="Content" asp-action="Manuals" asp-route-id=3>company.php</a></li>
+                <li class="test"><a asp-controller="Content" asp-action="Manuals" asp-route-id=4>protocols_list.php</a></li>
+                <li class="test"><a asp-controller="Content" asp-action="Manuals" asp-route-id=5>protocols.php</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="right_block">
+
+        @{
+            if (Model != null)
+            {
+                <div class="maincontent">
+                    <div class="tag">
+                        @Html.Raw(Model.Tag)
+                    </div>
+                    <div class="article">
+                        @Html.Raw(Model.Header)
+                        @Html.Raw(Model.Content)
+                    </div>
+                </div>
+                <div class="examplecontent">
+                    <div class="header">
+                    @Html.Raw(Model.ExampleHeader)
+                    </div>
+                    <div class="example">
+                        @Html.Raw(Model.Example)
+                        <br>
+                        <a asp-controller="Content" asp-action="SendRequest" asp-route-id=@Model.Id>Попробовать пример</a>
+                        
+                    </div>
+                </div>
+            }
+
+        }
+
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        @if(Model != null)
+        {
+            <text>
+            $(".dropdown").show();
+            </text>
+        }
+        else
+        {
+            <text>
+            $(".dropdown").hide();
+            </text>
+        }
+    });
+</script>
